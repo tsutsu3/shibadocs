@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.venv/
+*.tsbuildinfo
+.DS_Store
+
+# lab/ keeps its own ignore list for generated fonts and wasm.
