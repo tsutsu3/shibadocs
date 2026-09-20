@@ -35,19 +35,19 @@
 pnpm install                    # ルートで一度だけ（workspace 全体）
 
 # 1) 生成物を揃える（Python venv が要る。下記）
-pnpm lab assets                 # フォント取得 → 静的インスタンス → サブセット → wasm を public/ へ
-pnpm lab coverage               # サンプルの全文字がサブセットに入っているか
+pnpm lab:browser assets                 # フォント取得 → 静的インスタンス → サブセット → wasm を public/ へ
+pnpm lab:browser coverage               # サンプルの全文字がサブセットに入っているか
 
 #   個別に回すとき: fonts / subset / wasm / charset
 #   charset は commit 済みの data/*.txt を作り直すときだけ
 
 # 2) ブラウザで測る
-pnpm lab build
-pnpm lab serve                  # brotli 配信の静的サーバ。--mbps 40 で帯域制限
+pnpm lab:browser build
+pnpm lab:browser serve                  # brotli 配信の静的サーバ。--mbps 40 で帯域制限
 #   → http://localhost:5273 を開く（★ 体感はここで判断する）
 
 # 3) 数字だけ機械的に取る
-pnpm lab measure                # playwright で cold / warm を各 tier
+pnpm lab:browser measure                # playwright で cold / warm を各 tier
 ```
 
 ### Python venv
@@ -70,7 +70,7 @@ python3 -m venv .venv
 | 既定フォント | `disableDefaultFontAssets()` で CDN からの追加取得を止めている |
 | キャッシュ | IndexedDB に wasm とフォントを入れる。`?cache=0` で無効 |
 
-⚠️ **`pnpm lab build` し直したら `serve` も再起動する。** 事前圧縮は起動時にしか走らない
+⚠️ **`pnpm lab:browser build` し直したら `serve` も再起動する。** 事前圧縮は起動時にしか走らない
 （古い `.br` は mtime で弾くので、再起動を忘れても無圧縮で正しいものが出る）。
 
 ### URL パラメータ
@@ -117,21 +117,21 @@ Cache API に入れる        → ヒット時にヘッダだけ落ちる
 ### 手順
 
 ```bash
-pnpm lab build
-pnpm lab cf:types                 # wrangler.jsonc を変えたら再生成
+pnpm lab:browser build
+pnpm lab:browser cf:types                 # wrangler.jsonc を変えたら再生成
 
 # 初回だけ: バケットを作る
-pnpm lab exec wrangler r2 bucket create shibadocs-lab-wasm
+pnpm lab:browser exec wrangler r2 bucket create shibadocs-lab-wasm
 
-pnpm lab cf:upload                # brotli 圧縮して R2 へ（初回は1分ほど）
-pnpm lab cf:deploy
+pnpm lab:browser cf:upload                # brotli 圧縮して R2 へ（初回は1分ほど）
+pnpm lab:browser cf:deploy
 ```
 
 ローカルで通しを見るとき:
 
 ```bash
-pnpm lab cf:upload --local        # ローカルの R2 エミュレータへ
-pnpm lab cf:dev
+pnpm lab:browser cf:upload --local        # ローカルの R2 エミュレータへ
+pnpm lab:browser cf:dev
 ```
 
 ### デプロイ後に確認すること
@@ -176,4 +176,4 @@ data/                      文字集合。生成物だが commit する（再現
 - `public/fonts/` と `public/wasm/` は生成物。**commit しない**（合計 30MB 超）
 - `data/*.txt` は commit する。生成元の kanji-data が消えても再現できるようにするため
 - `public/samples/base.typ` は和文テンプレートのコピー。**ここでは編集しない**
-- `worker-configuration.d.ts` は生成物。`pnpm lab cf:types` で作る
+- `worker-configuration.d.ts` は生成物。`pnpm lab:browser cf:types` で作る

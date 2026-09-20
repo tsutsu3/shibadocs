@@ -7,6 +7,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "lab": "pnpm --filter @shibadocs-lab/typst-browser"
+    "lab:browser": "pnpm --filter @shibadocs-lab/typst-browser",
+    "lab:ref": "pnpm --filter @shibadocs-lab/reference-impl"
   }
 }
