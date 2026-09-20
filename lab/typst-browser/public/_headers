@@ -1,0 +1,18 @@
+# Cloudflare's default for static assets is `public, max-age=0, must-revalidate`
+# plus an etag, so the browser asks about every file on every load and gets a
+# 304. That is a round trip per file before anything can run.
+#
+# index.html keeps the default on purpose: it has to pick up a new deploy.
+
+# Vite writes a content hash into these names, so they can never change.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Pinned to the typst.ts release. The compiler wasm is served by the Worker,
+# where this file does not apply; its headers come from the R2 upload.
+/wasm/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# The names are stable while the subsets get regenerated, so revalidate daily.
+/fonts/*
+  Cache-Control: public, max-age=86400

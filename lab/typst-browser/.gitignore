@@ -1,0 +1,9 @@
+# Generated: fonts, wasm, and the kanji-data cache. Rebuild with pnpm setup / subset / charset.
+assets/
+public/fonts/
+public/wasm/
+data/.kanji-data.json
+.serve-cache/
+.cache/
+worker-configuration.d.ts
+.wrangler/

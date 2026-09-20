@@ -1,0 +1,131 @@
+{
+  "measuredAt": "2026-09-20T17:25:48.419Z",
+  "rows": [
+    {
+      "face": "NotoSansJP-Regular",
+      "tier": "kana",
+      "flavor": "ttf",
+      "chars": 2037,
+      "raw": 268896,
+      "gzip": 137613,
+      "brotli": 115533
+    },
+    {
+      "face": "NotoSansJP-Regular",
+      "tier": "kana",
+      "flavor": "woff2",
+      "chars": 2037,
+      "raw": 102260,
+      "gzip": 102313,
+      "brotli": 102265
+    },
+    {
+      "face": "NotoSansJP-Regular",
+      "tier": "joyo",
+      "flavor": "ttf",
+      "chars": 4173,
+      "raw": 897300,
+      "gzip": 529789,
+      "brotli": 473724
+    },
+    {
+      "face": "NotoSansJP-Regular",
+      "tier": "joyo",
+      "flavor": "woff2",
+      "chars": 4173,
+      "raw": 394560,
+      "gzip": 394703,
+      "brotli": 394565
+    },
+    {
+      "face": "NotoSansJP-Regular",
+      "tier": "joyo-jinmeiyo",
+      "flavor": "ttf",
+      "chars": 5035,
+      "raw": 1179444,
+      "gzip": 702034,
+      "brotli": 624724
+    },
+    {
+      "face": "NotoSansJP-Regular",
+      "tier": "joyo-jinmeiyo",
+      "flavor": "woff2",
+      "chars": 5035,
+      "raw": 519036,
+      "gzip": 519177,
+      "brotli": 519041
+    },
+    {
+      "face": "NotoSansJP-Regular",
+      "tier": "full",
+      "flavor": "ttf",
+      "chars": null,
+      "raw": 5766844,
+      "gzip": 3321252,
+      "brotli": 2765771
+    },
+    {
+      "face": "NotoSansJP-Bold",
+      "tier": "kana",
+      "flavor": "ttf",
+      "chars": 2037,
+      "raw": 270668,
+      "gzip": 139552,
+      "brotli": 117497
+    },
+    {
+      "face": "NotoSansJP-Bold",
+      "tier": "kana",
+      "flavor": "woff2",
+      "chars": 2037,
+      "raw": 103828,
+      "gzip": 103881,
+      "brotli": 103833
+    },
+    {
+      "face": "NotoSansJP-Bold",
+      "tier": "joyo",
+      "flavor": "ttf",
+      "chars": 4173,
+      "raw": 897820,
+      "gzip": 536164,
+      "brotli": 481035
+    },
+    {
+      "face": "NotoSansJP-Bold",
+      "tier": "joyo",
+      "flavor": "woff2",
+      "chars": 4173,
+      "raw": 401916,
+      "gzip": 402059,
+      "brotli": 401921
+    },
+    {
+      "face": "NotoSansJP-Bold",
+      "tier": "joyo-jinmeiyo",
+      "flavor": "ttf",
+      "chars": 5035,
+      "raw": 1179484,
+      "gzip": 710013,
+      "brotli": 633764
+    },
+    {
+      "face": "NotoSansJP-Bold",
+      "tier": "joyo-jinmeiyo",
+      "flavor": "woff2",
+      "chars": 5035,
+      "raw": 528856,
+      "gzip": 529039,
+      "brotli": 528861
+    },
+    {
+      "face": "NotoSansJP-Bold",
+      "tier": "full",
+      "flavor": "ttf",
+      "chars": null,
+      "raw": 5761672,
+      "gzip": 3357566,
+      "brotli": 2811253
+    }
+  ]
+}

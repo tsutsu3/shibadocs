@@ -1,0 +1,85 @@
+:root {
+  --bg: #fbfbfa;
+  --fg: #1d2127;
+  --muted: #6b7280;
+  --line: #e2e4e8;
+  --accent: #2f5f7f;
+  font-family: system-ui, "Noto Sans JP", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-size: 14px;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+header h1 { font-size: 15px; margin: 0; }
+nav { display: flex; gap: 10px; align-items: center; }
+nav a { color: var(--accent); }
+button { font: inherit; padding: 2px 8px; }
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 380px;
+  gap: 1px;
+  background: var(--line);
+  height: calc(100vh - 44px);
+}
+
+.pane { background: #fff; display: flex; flex-direction: column; min-width: 0; }
+.pane h2 {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 0;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+#editor {
+  flex: 1;
+  border: 0;
+  padding: 12px;
+  font-family: ui-monospace, "Noto Sans Mono", monospace;
+  font-size: 12.5px;
+  line-height: 1.7;
+  resize: none;
+  outline: none;
+}
+
+#preview { flex: 1; overflow: auto; padding: 12px; background: #f1f2f4; }
+#preview svg { width: 100%; height: auto; background: #fff; box-shadow: 0 1px 4px rgb(0 0 0 / 12%); }
+
+.hud-pane { overflow: auto; }
+#hud { padding: 12px; }
+
+.gate { border: 1px solid var(--line); border-radius: 3px; padding: 10px; margin-bottom: 12px; }
+.gate.ok { border-color: #4a7c46; background: #f2f8f1; }
+.gate.warn { border-color: #b06a00; background: #fdf6ec; }
+.gate.bad { border-color: #c8442b; background: #fdf1ef; }
+.gate div { display: flex; justify-content: space-between; padding: 2px 0; }
+.gate .label { color: var(--muted); }
+.gate .value { font-variant-numeric: tabular-nums; font-weight: 600; }
+.gate .verdict { display: block; margin-top: 6px; font-weight: 600; }
+.gate .mode { display: block; margin-top: 4px; color: var(--muted); font-size: 11.5px; }
+.gate .warnline { color: #b06a00; }
+
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 3px 4px; border-bottom: 1px solid var(--line); }
+th { color: var(--muted); font-weight: 500; }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+.note { color: var(--muted); }
+.meta { color: var(--muted); font-size: 11px; }
+.error { color: #c8442b; white-space: pre-wrap; }
