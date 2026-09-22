@@ -1,0 +1,4 @@
+# This site is installed on its own, outside the repository workspace.
+# core-js only prints a message on install; nothing needs building.
+allowBuilds:
+  core-js: false

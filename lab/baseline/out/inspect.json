@@ -1,0 +1,121 @@
+[
+  {
+    "file": "pandoc-app.pdf",
+    "pages": 2,
+    "bytes": 60053,
+    "fonts": [
+      "EVAEAV+DejaVuSansMono",
+      "GUETBT+LibertinusSerif-Regular-Identity-H",
+      "OMMPIC+LibertinusSerif-Bold-Identity-H"
+    ],
+    "cjk_font_embedded": false,
+    "probe_copyable": true,
+    "watermark": [],
+    "producer": "",
+    "replacement_chars": 0,
+    "outline": [
+      "在庫管理システム 基本設計書",
+      "システム構成",
+      "インタフェース",
+      "エラーコード",
+      "非機能要件",
+      "移行"
+    ]
+  },
+  {
+    "file": "pandoc-app-font.pdf",
+    "pages": 2,
+    "bytes": 60134,
+    "fonts": [
+      "EVAEAV+DejaVuSansMono",
+      "GUETBT+LibertinusSerif-Regular-Identity-H",
+      "OMMPIC+LibertinusSerif-Bold-Identity-H"
+    ],
+    "cjk_font_embedded": false,
+    "probe_copyable": true,
+    "watermark": [],
+    "replacement_chars": 0,
+    "outline": [
+      "在庫管理システム 基本設計書",
+      "システム構成",
+      "インタフェース",
+      "エラーコード",
+      "非機能要件",
+      "移行"
+    ]
+  },
+  {
+    "file": "docusaurus-prince.pdf",
+    "pages": 5,
+    "bytes": 131730,
+    "fonts": [
+      "PXAAAA+IPAGothic",
+      "PXAAAB+Ubuntu",
+      "PXAAAC+Ubuntu-Bold",
+      "PXAAAD+LiberationMono",
+      "PXAAAE+DejaVuSans"
+    ],
+    "cjk_font_embedded": true,
+    "probe_copyable": true,
+    "watermark": [
+      "logo (top-right, vector)"
+    ],
+    "producer": "Prince 16.2 (www.princexml.com)",
+    "replacement_chars": 0,
+    "outline": [
+      "はじめに",
+      "在庫管理システム 基本設計書",
+      "システム構成",
+      "インタフェース",
+      "エラーコード",
+      "非機能要件",
+      "移行"
+    ]
+  },
+  {
+    "file": "docs-to-pdf.pdf",
+    "pages": 6,
+    "bytes": 321496,
+    "fonts": [
+      "",
+      "BAAAAA+DejaVuSans-Bold",
+      "CAAAAA+IPAPGothic",
+      "DAAAAA+DejaVuSans",
+      "EAAAAA+LiberationMono"
+    ],
+    "cjk_font_embedded": true,
+    "probe_copyable": true,
+    "watermark": [],
+    "producer": "pdf-lib (https://github.com/Hopding/pdf-lib)",
+    "replacement_chars": 0,
+    "outline": [
+      "在庫管理システム",
+      "Table of contents:",
+      "はじめに",
+      "在庫管理システム 基本設計書",
+      "システム構成​",
+      "インタフェース​",
+      "エラーコード​",
+      "非機能要件​",
+      "移行​"
+    ]
+  },
+  {
+    "file": "mr-pdf.pdf",
+    "pages": 6,
+    "bytes": 367001,
+    "fonts": [
+      "",
+      "AAAAAA+DejaVuSans-Bold",
+      "BAAAAA+IPAPGothic",
+      "CAAAAA+DejaVuSans",
+      "EAAAAA+LiberationMono"
+    ],
+    "cjk_font_embedded": true,
+    "probe_copyable": true,
+    "watermark": [],
+    "producer": "Skia/PDF m153",
+    "replacement_chars": 0,
+    "outline": []
+  }
+]

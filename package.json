@@ -8,6 +8,7 @@
   },
   "scripts": {
     "lab:browser": "pnpm --filter @shibadocs-lab/typst-browser",
-    "lab:ref": "pnpm --filter @shibadocs-lab/reference-impl"
+    "lab:ref": "pnpm --filter @shibadocs-lab/reference-impl",
+    "lab:baseline": "pnpm --filter @shibadocs-lab/baseline"
   }
 }
