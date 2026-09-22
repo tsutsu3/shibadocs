@@ -1,0 +1,13 @@
+packages:
+  - "packages/*"
+  - "plugins/*"
+  - "apps/*"
+  - "lab/*"
+
+# Both ship prebuilt binaries; their install scripts must run.
+# puppeteer's script only downloads a Chrome; lab/baseline points it at the
+# Chromium that Playwright already installed.
+allowBuilds:
+  esbuild: true
+  workerd: true
+  puppeteer: false

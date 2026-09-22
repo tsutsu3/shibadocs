@@ -1,0 +1,19 @@
+{
+  "name": "@shibadocs-lab/baseline",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Produce PDFs from the same Japanese document with existing tools, to compare against",
+  "scripts": {
+    "pandoc-app": "node scripts/pandoc-app.mjs",
+    "site:build": "cd site && pnpm install --ignore-workspace && pnpm build",
+    "site:serve": "cd site && pnpm serve",
+    "site-tools": "bash scripts/site-tools.sh",
+    "inspect": ".venv/bin/python scripts/inspect_pdf.py",
+    "compare": ".venv/bin/python scripts/compare.py"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0",
+    "docusaurus-prince-pdf": "^1.2.1"
+  }
+}

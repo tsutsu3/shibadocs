@@ -1,0 +1,6 @@
+.venv/
+.bin/
+.work/
+out/*.log
+out/*-p[0-9].png
+site/pnpm-lock.yaml

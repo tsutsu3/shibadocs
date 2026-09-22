@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>shibadocs lab — typst.ts 初回ロード計測</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>typst.ts + 和文フォントの初回ロード</h1>
+      <nav>
+        <a href="?tier=kana">かな</a>
+        <a href="?tier=joyo">常用漢字</a>
+        <a href="?tier=joyo-jinmeiyo">常用+人名用</a>
+        <a href="?tier=joyo&amp;cache=0">キャッシュ無効</a>
+        <button id="pdf" type="button">PDF を保存</button>
+        <button id="clear" type="button">キャッシュを消して cold で再読込</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="pane">
+        <h2>入力（読み込み前から書ける）</h2>
+        <textarea id="editor" spellcheck="false" placeholder="ここはコンパイラの読み込み前から入力できる"></textarea>
+      </section>
+      <section class="pane">
+        <h2>プレビュー</h2>
+        <div id="preview"></div>
+      </section>
+      <section class="pane hud-pane">
+        <h2>計測</h2>
+        <div id="hud"></div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

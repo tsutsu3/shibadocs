@@ -1,0 +1,17 @@
+{
+  "name": "@shibadocs-lab/reference-impl",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Survey mystmd, myst-spec and tex-to-typst before writing our own converter",
+  "scripts": {
+    "myst": "node scripts/run-myst.mjs",
+    "nodes": "node scripts/myst-nodes.mjs",
+    "tex": "node scripts/run-tex.mjs"
+  },
+  "dependencies": {
+    "mystmd": "^1.7.1",
+    "myst-spec": "^0.0.5",
+    "tex-to-typst": "^0.0.22"
+  }
+}

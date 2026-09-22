@@ -1,0 +1,1178 @@
+{
+  "measuredAt": "2026-09-20T14:23:14.117Z",
+  "base": "http://localhost:5273",
+  "profiles": {
+    "local": null,
+    "office": {
+      "mbps": 40,
+      "latencyMs": 20
+    },
+    "mobile": {
+      "mbps": 10,
+      "latencyMs": 70
+    }
+  },
+  "results": [
+    {
+      "profile": "local",
+      "tier": "kana",
+      "cold": {
+        "startedAt": "2026-09-20T14:22:21.584Z",
+        "tier": "kana",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 42.099999994039536
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 4.0999999940395355,
+            "atMs": 46.5,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (kana x2)",
+            "ms": 37.80000001192093,
+            "atMs": 84.59999999403954,
+            "bytes": 539564,
+            "wire": 233630,
+            "source": "network",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 15,
+            "atMs": 99.7999999821186,
+            "bytes": 972425,
+            "wire": 270435,
+            "source": "network"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 223.59999999403954,
+            "atMs": 323.59999999403954,
+            "bytes": 28325178,
+            "wire": 7216843,
+            "source": "network"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 32.5,
+            "atMs": 356.69999998807907
+          },
+          {
+            "name": "first compile + render",
+            "ms": 264.2999999821186,
+            "atMs": 621.7999999821186
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 647
+          }
+        ],
+        "recompileMs": [
+          43.70000001788139
+        ],
+        "editorReadyMs": 41.900000005960464,
+        "firstPreviewMs": 646
+      },
+      "warm": {
+        "startedAt": "2026-09-20T14:22:22.910Z",
+        "tier": "kana",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 36.900000005960464
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 5.899999976158142,
+            "atMs": 43.099999994039536,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (kana x2)",
+            "ms": 3.5,
+            "atMs": 47,
+            "bytes": 539564,
+            "source": "indexeddb",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 31.099999994039536,
+            "atMs": 78.40000000596046,
+            "bytes": 972425,
+            "source": "indexeddb"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 57.099999994039536,
+            "atMs": 135.80000001192093,
+            "bytes": 28325178,
+            "source": "indexeddb"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 35.5,
+            "atMs": 172
+          },
+          {
+            "name": "first compile + render",
+            "ms": 295,
+            "atMs": 467.80000001192093
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 486.09999999403954
+          }
+        ],
+        "recompileMs": [
+          49.80000001192093
+        ],
+        "editorReadyMs": 36.70000001788139,
+        "firstPreviewMs": 485.90000000596046
+      }
+    },
+    {
+      "profile": "local",
+      "tier": "joyo",
+      "cold": {
+        "startedAt": "2026-09-20T14:22:24.142Z",
+        "tier": "joyo",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 36.599999994039536
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 5.200000017881393,
+            "atMs": 42,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (joyo x2)",
+            "ms": 51.599999994039536,
+            "atMs": 93.89999997615814,
+            "bytes": 1795120,
+            "wire": 955359,
+            "source": "network",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 15.099999994039536,
+            "atMs": 109.39999997615814,
+            "bytes": 972425,
+            "wire": 270435,
+            "source": "network"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 211.59999999403954,
+            "atMs": 321.09999999403954,
+            "bytes": 28325178,
+            "wire": 7216843,
+            "source": "network"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 36.29999998211861,
+            "atMs": 357.89999997615814
+          },
+          {
+            "name": "first compile + render",
+            "ms": 267.59999999403954,
+            "atMs": 626.0999999940395
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 644.6999999880791
+          }
+        ],
+        "recompileMs": [
+          47.099999994039536
+        ],
+        "editorReadyMs": 36.5,
+        "firstPreviewMs": 644.3999999761581
+      },
+      "warm": {
+        "startedAt": "2026-09-20T14:22:25.414Z",
+        "tier": "joyo",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 26.400000005960464
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 10.800000011920929,
+            "atMs": 37.5,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (joyo x2)",
+            "ms": 29.099999994039536,
+            "atMs": 66.90000000596046,
+            "bytes": 1795120,
+            "source": "indexeddb",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 3,
+            "atMs": 70.09999999403954,
+            "bytes": 972425,
+            "source": "indexeddb"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 69.39999997615814,
+            "atMs": 139.69999998807907,
+            "bytes": 28325178,
+            "source": "indexeddb"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 43.5,
+            "atMs": 183.80000001192093
+          },
+          {
+            "name": "first compile + render",
+            "ms": 287.09999999403954,
+            "atMs": 471.69999998807907
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 497.40000000596046
+          }
+        ],
+        "recompileMs": [
+          49.89999997615814
+        ],
+        "editorReadyMs": 26.30000001192093,
+        "firstPreviewMs": 496.5
+      }
+    },
+    {
+      "profile": "local",
+      "tier": "joyo-jinmeiyo",
+      "cold": {
+        "startedAt": "2026-09-20T14:22:26.573Z",
+        "tier": "joyo-jinmeiyo",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 36.400000005960464
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 4.9000000059604645,
+            "atMs": 41.5,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (joyo-jinmeiyo x2)",
+            "ms": 57.599999994039536,
+            "atMs": 99.5,
+            "bytes": 2358928,
+            "wire": 1259088,
+            "source": "network",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 16.200000017881393,
+            "atMs": 115.90000000596046,
+            "bytes": 972425,
+            "wire": 270435,
+            "source": "network"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 204.59999999403954,
+            "atMs": 320.7999999821186,
+            "bytes": 28325178,
+            "wire": 7216843,
+            "source": "network"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 34.70000001788139,
+            "atMs": 356
+          },
+          {
+            "name": "first compile + render",
+            "ms": 276.09999999403954,
+            "atMs": 633
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 653.9000000059605
+          }
+        ],
+        "recompileMs": [
+          68.30000001192093
+        ],
+        "editorReadyMs": 36.400000005960464,
+        "firstPreviewMs": 653.5999999940395
+      },
+      "warm": {
+        "startedAt": "2026-09-20T14:22:27.903Z",
+        "tier": "joyo-jinmeiyo",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 38
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 4.4000000059604645,
+            "atMs": 42.599999994039536,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (joyo-jinmeiyo x2)",
+            "ms": 31.69999998807907,
+            "atMs": 74.5,
+            "bytes": 2358928,
+            "source": "indexeddb",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 3.7999999821186066,
+            "atMs": 78.59999999403954,
+            "bytes": 972425,
+            "source": "indexeddb"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 50.5,
+            "atMs": 129.19999998807907,
+            "bytes": 28325178,
+            "source": "indexeddb"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 37.599999994039536,
+            "atMs": 167.40000000596046
+          },
+          {
+            "name": "first compile + render",
+            "ms": 282.5,
+            "atMs": 450.59999999403954
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 466.80000001192093
+          }
+        ],
+        "recompileMs": [
+          54.599999994039536
+        ],
+        "editorReadyMs": 37.69999998807907,
+        "firstPreviewMs": 466.59999999403954
+      }
+    },
+    {
+      "profile": "office",
+      "tier": "kana",
+      "cold": {
+        "startedAt": "2026-09-20T14:22:29.051Z",
+        "tier": "kana",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 73.40000000596046
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 26,
+            "atMs": 99.69999998807907,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (kana x2)",
+            "ms": 80.5,
+            "atMs": 180.40000000596046,
+            "bytes": 539564,
+            "wire": 233630,
+            "source": "network",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 95.69999998807907,
+            "atMs": 276.2999999821186,
+            "bytes": 972425,
+            "wire": 270435,
+            "source": "network"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 1800.5,
+            "atMs": 2077,
+            "bytes": 28325178,
+            "wire": 7216843,
+            "source": "network"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 75.90000000596046,
+            "atMs": 2153.5
+          },
+          {
+            "name": "first compile + render",
+            "ms": 329.09999999403954,
+            "atMs": 2483.2999999821186
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 2507
+          }
+        ],
+        "recompileMs": [
+          51.69999998807907
+        ],
+        "editorReadyMs": 73.2999999821186,
+        "firstPreviewMs": 2506.7999999821186
+      },
+      "warm": {
+        "startedAt": "2026-09-20T14:22:32.193Z",
+        "tier": "kana",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 70.59999999403954
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 26.69999998807907,
+            "atMs": 97.59999999403954,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (kana x2)",
+            "ms": 3,
+            "atMs": 100.7999999821186,
+            "bytes": 539564,
+            "source": "indexeddb",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 2.5999999940395355,
+            "atMs": 103.59999999403954,
+            "bytes": 972425,
+            "source": "indexeddb"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 60.80000001192093,
+            "atMs": 164.5,
+            "bytes": 28325178,
+            "source": "indexeddb"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 86.59999999403954,
+            "atMs": 251.59999999403954
+          },
+          {
+            "name": "first compile + render",
+            "ms": 326,
+            "atMs": 578.4000000059605
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 591.6999999880791
+          }
+        ],
+        "recompileMs": [
+          44.19999998807907
+        ],
+        "editorReadyMs": 70.40000000596046,
+        "firstPreviewMs": 591.5
+      }
+    },
+    {
+      "profile": "office",
+      "tier": "joyo",
+      "cold": {
+        "startedAt": "2026-09-20T14:22:33.410Z",
+        "tier": "joyo",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 72.40000000596046
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 26,
+            "atMs": 98.69999998807907,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (joyo x2)",
+            "ms": 241.80000001192093,
+            "atMs": 340.80000001192093,
+            "bytes": 1795120,
+            "wire": 955359,
+            "source": "network",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 93.90000000596046,
+            "atMs": 434.90000000596046,
+            "bytes": 972425,
+            "wire": 270435,
+            "source": "network"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 1785.0999999940395,
+            "atMs": 2220.0999999940395,
+            "bytes": 28325178,
+            "wire": 7216843,
+            "source": "network"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 76.10000002384186,
+            "atMs": 2296.800000011921
+          },
+          {
+            "name": "first compile + render",
+            "ms": 336.59999999403954,
+            "atMs": 2634.5
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 2663.199999988079
+          }
+        ],
+        "recompileMs": [
+          60.30000001192093
+        ],
+        "editorReadyMs": 72.19999998807907,
+        "firstPreviewMs": 2662.800000011921
+      },
+      "warm": {
+        "startedAt": "2026-09-20T14:22:36.714Z",
+        "tier": "joyo",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 69.40000000596046
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 24.700000017881393,
+            "atMs": 94.30000001192093,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (joyo x2)",
+            "ms": 29.80000001192093,
+            "atMs": 124.30000001192093,
+            "bytes": 1795120,
+            "source": "indexeddb",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 3.300000011920929,
+            "atMs": 127.90000000596046,
+            "bytes": 972425,
+            "source": "indexeddb"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 46.099999994039536,
+            "atMs": 174.09999999403954,
+            "bytes": 28325178,
+            "source": "indexeddb"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 84.5,
+            "atMs": 259.09999999403954
+          },
+          {
+            "name": "first compile + render",
+            "ms": 334.80000001192093,
+            "atMs": 594.7000000178814
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 610.4000000059605
+          }
+        ],
+        "recompileMs": [
+          47
+        ],
+        "editorReadyMs": 69.2000000178814,
+        "firstPreviewMs": 610.2000000178814
+      }
+    },
+    {
+      "profile": "office",
+      "tier": "joyo-jinmeiyo",
+      "cold": {
+        "startedAt": "2026-09-20T14:22:37.927Z",
+        "tier": "joyo-jinmeiyo",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 71.60000002384186
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 25.19999998807907,
+            "atMs": 96.90000000596046,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (joyo-jinmeiyo x2)",
+            "ms": 311.2999999821186,
+            "atMs": 408.40000000596046,
+            "bytes": 2358928,
+            "wire": 1259088,
+            "source": "network",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 94,
+            "atMs": 502.60000002384186,
+            "bytes": 972425,
+            "wire": 270435,
+            "source": "network"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 1765.5999999940395,
+            "atMs": 2268.4000000059605,
+            "bytes": 28325178,
+            "wire": 7216843,
+            "source": "network"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 76.09999999403954,
+            "atMs": 2345
+          },
+          {
+            "name": "first compile + render",
+            "ms": 334.19999998807907,
+            "atMs": 2679.9000000059605
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 2699.800000011921
+          }
+        ],
+        "recompileMs": [
+          48.30000001192093
+        ],
+        "editorReadyMs": 71.40000000596046,
+        "firstPreviewMs": 2699.5
+      },
+      "warm": {
+        "startedAt": "2026-09-20T14:22:41.256Z",
+        "tier": "joyo-jinmeiyo",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 69
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 24.80000001192093,
+            "atMs": 94.10000002384186,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (joyo-jinmeiyo x2)",
+            "ms": 6.300000011920929,
+            "atMs": 100.7000000178814,
+            "bytes": 2358928,
+            "source": "indexeddb",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 2.800000011920929,
+            "atMs": 103.7000000178814,
+            "bytes": 972425,
+            "source": "indexeddb"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 62.19999998807907,
+            "atMs": 166,
+            "bytes": 28325178,
+            "source": "indexeddb"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 78,
+            "atMs": 244.60000002384186
+          },
+          {
+            "name": "first compile + render",
+            "ms": 334.7000000178814,
+            "atMs": 580.1000000238419
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 597.9000000059605
+          }
+        ],
+        "recompileMs": [
+          68.40000000596046
+        ],
+        "editorReadyMs": 69,
+        "firstPreviewMs": 597.6000000238419
+      }
+    },
+    {
+      "profile": "mobile",
+      "tier": "kana",
+      "cold": {
+        "startedAt": "2026-09-20T14:22:42.642Z",
+        "tier": "kana",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 179.7000000178814
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 77.69999998807907,
+            "atMs": 257.59999999403954,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (kana x2)",
+            "ms": 300.2000000178814,
+            "atMs": 558.3000000119209,
+            "bytes": 539564,
+            "wire": 233630,
+            "source": "network",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 298.59999999403954,
+            "atMs": 857.0999999940395,
+            "bytes": 972425,
+            "wire": 270435,
+            "source": "network"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 6073.4000000059605,
+            "atMs": 6930.700000017881,
+            "bytes": 28325178,
+            "wire": 7216843,
+            "source": "network"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 179.09999999403954,
+            "atMs": 7110.300000011921
+          },
+          {
+            "name": "first compile + render",
+            "ms": 507.69999998807907,
+            "atMs": 7618.5999999940395
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 7641.800000011921
+          }
+        ],
+        "recompileMs": [
+          42.30000001192093
+        ],
+        "editorReadyMs": 179.40000000596046,
+        "firstPreviewMs": 7641.4000000059605
+      },
+      "warm": {
+        "startedAt": "2026-09-20T14:22:50.891Z",
+        "tier": "kana",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 169.69999998807907
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 77.19999998807907,
+            "atMs": 247.19999998807907,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (kana x2)",
+            "ms": 2.800000011920929,
+            "atMs": 250.5,
+            "bytes": 539564,
+            "source": "indexeddb",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 2.9000000059604645,
+            "atMs": 253.5,
+            "bytes": 972425,
+            "source": "indexeddb"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 51,
+            "atMs": 304.59999999403954,
+            "bytes": 28325178,
+            "source": "indexeddb"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 181.7000000178814,
+            "atMs": 487
+          },
+          {
+            "name": "first compile + render",
+            "ms": 479.19999998807907,
+            "atMs": 966.8999999761581
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 980.6999999880791
+          }
+        ],
+        "recompileMs": [
+          47.599999994039536
+        ],
+        "editorReadyMs": 169.5,
+        "firstPreviewMs": 980.3999999761581
+      }
+    },
+    {
+      "profile": "mobile",
+      "tier": "joyo",
+      "cold": {
+        "startedAt": "2026-09-20T14:22:52.506Z",
+        "tier": "joyo",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 174.5
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 78,
+            "atMs": 252.69999998807907,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (joyo x2)",
+            "ms": 848.1999999880791,
+            "atMs": 1101.199999988079,
+            "bytes": 1795120,
+            "wire": 955359,
+            "source": "network",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 301.69999998807907,
+            "atMs": 1403.199999988079,
+            "bytes": 972425,
+            "wire": 270435,
+            "source": "network"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 6451.699999988079,
+            "atMs": 7855.199999988079,
+            "bytes": 28325178,
+            "wire": 7216843,
+            "source": "network"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 185.60000002384186,
+            "atMs": 8041.300000011921
+          },
+          {
+            "name": "first compile + render",
+            "ms": 498.59999999403954,
+            "atMs": 8540.5
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 8561.199999988079
+          }
+        ],
+        "recompileMs": [
+          48.89999997615814
+        ],
+        "editorReadyMs": 174.30000001192093,
+        "firstPreviewMs": 8561
+      },
+      "warm": {
+        "startedAt": "2026-09-20T14:23:01.806Z",
+        "tier": "joyo",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 169.7999999821186
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 76.7999999821186,
+            "atMs": 246.7999999821186,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (joyo x2)",
+            "ms": 4.5,
+            "atMs": 251.69999998807907,
+            "bytes": 1795120,
+            "source": "indexeddb",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 3,
+            "atMs": 254.90000000596046,
+            "bytes": 972425,
+            "source": "indexeddb"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 46.80000001192093,
+            "atMs": 302,
+            "bytes": 28325178,
+            "source": "indexeddb"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 186.7999999821186,
+            "atMs": 489.69999998807907
+          },
+          {
+            "name": "first compile + render",
+            "ms": 503.59999999403954,
+            "atMs": 994.0999999940395
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 1010.5999999940395
+          }
+        ],
+        "recompileMs": [
+          48.400000005960464
+        ],
+        "editorReadyMs": 169.69999998807907,
+        "firstPreviewMs": 1010.4000000059605
+      }
+    },
+    {
+      "profile": "mobile",
+      "tier": "joyo-jinmeiyo",
+      "cold": {
+        "startedAt": "2026-09-20T14:23:03.443Z",
+        "tier": "joyo-jinmeiyo",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 172.90000000596046
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 77.7999999821186,
+            "atMs": 250.7999999821186,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (joyo-jinmeiyo x2)",
+            "ms": 1094.800000011921,
+            "atMs": 1345.9000000059605,
+            "bytes": 2358928,
+            "wire": 1259088,
+            "source": "network",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 318.40000000596046,
+            "atMs": 1664.5,
+            "bytes": 972425,
+            "wire": 270435,
+            "source": "network"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 6103.200000017881,
+            "atMs": 7767.9000000059605,
+            "bytes": 28325178,
+            "wire": 7216843,
+            "source": "network"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 178.7999999821186,
+            "atMs": 7947.199999988079
+          },
+          {
+            "name": "first compile + render",
+            "ms": 490.19999998807907,
+            "atMs": 8438.09999999404
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 8455.90000000596
+          }
+        ],
+        "recompileMs": [
+          49
+        ],
+        "editorReadyMs": 172.69999998807907,
+        "firstPreviewMs": 8455.59999999404
+      },
+      "warm": {
+        "startedAt": "2026-09-20T14:23:12.529Z",
+        "tier": "joyo-jinmeiyo",
+        "cacheEnabled": true,
+        "phases": [
+          {
+            "name": "editor interactive",
+            "ms": 0,
+            "atMs": 170.40000000596046
+          },
+          {
+            "name": "fetch sample .typ",
+            "ms": 76.40000000596046,
+            "atMs": 246.90000000596046,
+            "bytes": 8152,
+            "source": "network"
+          },
+          {
+            "name": "fetch font (joyo-jinmeiyo x2)",
+            "ms": 6.699999988079071,
+            "atMs": 253.90000000596046,
+            "bytes": 2358928,
+            "source": "indexeddb",
+            "note": "2 face"
+          },
+          {
+            "name": "fetch renderer wasm",
+            "ms": 27.30000001192093,
+            "atMs": 281.40000000596046,
+            "bytes": 972425,
+            "source": "indexeddb"
+          },
+          {
+            "name": "fetch compiler wasm",
+            "ms": 49.19999998807907,
+            "atMs": 330.90000000596046,
+            "bytes": 28325178,
+            "source": "indexeddb"
+          },
+          {
+            "name": "init compiler (wasm + font)",
+            "ms": 183.5,
+            "atMs": 515.0999999940395
+          },
+          {
+            "name": "first compile + render",
+            "ms": 500.19999998807907,
+            "atMs": 1016
+          },
+          {
+            "name": "first preview painted",
+            "ms": 0,
+            "atMs": 1031.300000011921
+          }
+        ],
+        "recompileMs": [
+          67.59999999403954
+        ],
+        "editorReadyMs": 170.2000000178814,
+        "firstPreviewMs": 1031.2000000178814
+      }
+    }
+  ]
+}

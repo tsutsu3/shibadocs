@@ -1,0 +1,37 @@
+{
+  "name": "@shibadocs-lab/typst-browser",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Measure typst.ts + Japanese font load time in the browser",
+  "scripts": {
+    "assets": "node scripts/setup-fonts.mjs && node scripts/subset-fonts.mjs && node scripts/copy-wasm.mjs",
+    "fonts": "node scripts/setup-fonts.mjs",
+    "charset": "node scripts/gen-charset.mjs",
+    "subset": "node scripts/subset-fonts.mjs",
+    "wasm": "node scripts/copy-wasm.mjs",
+    "coverage": "node scripts/coverage.mjs",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "node scripts/serve.mjs",
+    "measure": "node scripts/measure.mjs",
+    "wrangler": "wrangler",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.worker.json",
+    "cf:upload": "node scripts/upload-wasm.mjs",
+    "cf:dev": "wrangler dev",
+    "cf:deploy": "wrangler deploy",
+    "cf:types": "wrangler types"
+  },
+  "dependencies": {
+    "@myriaddreamin/typst-ts-renderer": "0.7.0",
+    "@myriaddreamin/typst-ts-web-compiler": "0.7.0",
+    "@myriaddreamin/typst.ts": "0.7.0",
+    "idb": "^8.0.3"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.14",
+    "wrangler": "^4.135.0"
+  }
+}
