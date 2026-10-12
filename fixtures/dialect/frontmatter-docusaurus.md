@@ -1,0 +1,13 @@
+---
+id: inventory-design
+title: 在庫管理システム 基本設計書
+description: 在庫管理システムの基本設計を示す。
+sidebar_label: 基本設計
+sidebar_position: 2
+slug: /design/inventory
+tags: [設計, API]
+draft: false
+version: 2.0
+---
+
+本文。

@@ -21,5 +21,17 @@
       "kind": "invalid-frontmatter",
       "message": "These frontmatter keys have an invalid value and are ignored. title, revisions"
     }
-  ]
+  ],
+  "data": {
+    "frontmatter": {
+      "title": [
+        "設計書"
+      ],
+      "author": "山田 太郎",
+      "paper": "a5",
+      "revisions": [
+        "初版"
+      ]
+    }
+  }
 }

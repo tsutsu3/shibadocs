@@ -3,7 +3,7 @@ title: 在庫管理システム 基本設計書
 subtitle: 第2版
 version: 1.0
 date: 2026-09-01
-template: ja-report
+doc_template: ja-report
 paper: A3
 landscape: true
 approvals: [作成, 審査, 承認]

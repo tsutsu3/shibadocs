@@ -1,0 +1,70 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "本文。",
+          "position": {
+            "start": {
+              "line": 13,
+              "column": 1,
+              "offset": 161
+            },
+            "end": {
+              "line": 13,
+              "column": 4,
+              "offset": 164
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 13,
+          "column": 1,
+          "offset": 161
+        },
+        "end": {
+          "line": 13,
+          "column": 4,
+          "offset": 164
+        }
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 14,
+      "column": 1,
+      "offset": 165
+    }
+  },
+  "meta": {
+    "title": "在庫管理システム 基本設計書",
+    "description": "在庫管理システムの基本設計を示す。",
+    "version": "2.0"
+  },
+  "warnings": [],
+  "data": {
+    "frontmatter": {
+      "title": "在庫管理システム 基本設計書",
+      "description": "在庫管理システムの基本設計を示す。",
+      "template": "splash",
+      "sidebar": {
+        "order": 2,
+        "label": "基本設計"
+      },
+      "tableOfContents": false,
+      "draft": true,
+      "version": 2
+    }
+  }
+}

@@ -31,6 +31,14 @@ export function parse(md: string): Root {
     extensions: [gfm(), frontmatter(["yaml"])],
     mdastExtensions: [gfmFromMarkdown(), frontmatterFromMarkdown(["yaml"])],
   }) as Parent;
-  const { children, meta, warnings } = extractFrontmatter(tree.children);
-  return { ...tree, type: "root", children, meta, warnings };
+
+  const { children, meta, raw, warnings } = extractFrontmatter(tree.children);
+
+  const root: Root = { ...tree, type: "root", children, meta, warnings };
+
+  if (raw !== undefined) {
+    root.data = { frontmatter: raw };
+  }
+
+  return root;
 }

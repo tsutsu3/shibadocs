@@ -11,6 +11,12 @@ export interface Frontmatter {
   /** The typed frontmatter. `{}` when the document has none. */
   meta: DocMeta;
 
+  /**
+   * The complete frontmatter with YAML types. It includes the site settings.
+   * `undefined` when the document has no frontmatter that can be read.
+   */
+  raw: Record<string, unknown> | undefined;
+
   /** The problems found in the frontmatter. `[]` when there is none. */
   warnings: Warning[];
 }
@@ -26,7 +32,7 @@ export function extractFrontmatter(children: readonly Node[]): Frontmatter {
   // The frontmatter is valid only at the top of a document.
   const [first, ...rest] = children;
   if (first?.type !== "yaml")
-    return { children: [...children], meta: {}, warnings: [] };
+    return { children: [...children], meta: {}, raw: undefined, warnings: [] };
 
   const node = first as Literal;
   const startLine = node.position?.start.line ?? 1;
@@ -70,7 +76,7 @@ export function extractFrontmatter(children: readonly Node[]): Frontmatter {
     });
   }
 
-  return { children: rest, meta, warnings };
+  return { children: rest, meta, raw: values, warnings };
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -94,5 +100,10 @@ function keepAsCode(
     value: node.value,
     position: node.position,
   } as Literal;
-  return { children: [code, ...rest], meta: {}, warnings: [warning] };
+  return {
+    children: [code, ...rest],
+    meta: {},
+    raw: undefined,
+    warnings: [warning],
+  };
 }

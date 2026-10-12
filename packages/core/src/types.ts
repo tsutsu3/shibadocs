@@ -59,6 +59,16 @@ export interface Root extends Parent {
 
   /** The problems found in the source. It is `[]` when there is none. */
   warnings: Warning[];
+
+  /**
+   * Extra data about the document.
+   *
+   * @remarks
+   * `data.frontmatter` is the complete frontmatter with YAML types. It includes
+   *  the site settings that are not in `meta`, such as `sidebar_position`.
+   * The field is absent when the source has no frontmatter that can be read.
+   */
+  data?: Record<string, unknown>;
 }
 
 /**
@@ -68,10 +78,14 @@ export interface Root extends Parent {
  * A known key with a value of a wrong form is left out and reported as a
  * warning. A key without a value is left out without a warning.
  *
+ * Keys that configure a Docusaurus or Starlight site are left out too.
+ * Examples are `sidebar_position`, `slug` and `tags`. The complete
+ * frontmatter is in `root.data.frontmatter`.
+ *
  * @example
  * ```ts
- * const { meta } = parse("---\ntitle: Design\nversion: 1.0\npaper: A3\n---\n");
- * // { title: "Design", version: "1.0", paper: "a3" }
+ * const { meta } = parse("---\ntitle: Design\nversion: 1.0\nslug: /a\n---\n");
+ * // { title: "Design", version: "1.0" }
  * ```
  */
 export interface DocMeta {
@@ -96,8 +110,13 @@ export interface DocMeta {
   /** The document date, as written in the source. The parser does not parse it. */
   date?: string;
 
-  /** The template name. For example `ja-report`. */
-  template?: string;
+  /**
+   * The name of the document template. For example `ja-report`.
+   *
+   * @remarks
+   * The key is not `template`. Starlight uses that name for its page layout.
+   */
+  doc_template?: string;
 
   /** The revision history, in source order. */
   revisions?: Revision[];

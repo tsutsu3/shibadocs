@@ -1,0 +1,35 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "本文。"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "title": "在庫管理システムを刷新しました",
+    "description": "刷新の背景と変更点をまとめます。",
+    "author": "山田 太郎",
+    "date": "2026-09-01"
+  },
+  "warnings": [],
+  "data": {
+    "frontmatter": {
+      "title": "在庫管理システムを刷新しました",
+      "description": "刷新の背景と変更点をまとめます。",
+      "author": "山田 太郎",
+      "author_title": "開発リーダー",
+      "author_url": "https://example.com/yamada",
+      "date": "2026-09-01",
+      "slug": "inventory-renewal",
+      "tags": [
+        "リリース"
+      ]
+    }
+  }
+}

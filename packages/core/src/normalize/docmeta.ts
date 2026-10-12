@@ -1,3 +1,5 @@
+import { DOCUSAURUS_SITE_KEYS } from "../dialects/docusaurus.js";
+import { STARLIGHT_SITE_KEYS } from "../dialects/starlight.js";
 import type { DocMeta, Revision } from "../types.js";
 
 /** The result of {@link toDocMeta}. */
@@ -15,7 +17,7 @@ const STRING_KEYS = [
   "author",
   "version",
   "date",
-  "template",
+  "doc_template",
 ] as const;
 
 /**
@@ -24,7 +26,7 @@ const STRING_KEYS = [
  * @param values - The frontmatter with YAML types. `version: 1.0` is the number 1 here.
  * @param strings - The same frontmatter with every value as its source text.
  * @returns The typed metadata and the names of the keys that were left out.
- * Unknown keys are copied as they are.
+ * Unknown keys are copied as they are. Site settings are left out.
  */
 export function toDocMeta(
   values: Readonly<Record<string, unknown>>,
@@ -35,6 +37,7 @@ export function toDocMeta(
 
   for (const [key, value] of Object.entries(values)) {
     if (value === null) continue;
+    if (isSiteSetting(key)) continue;
 
     const typed = toTyped(key, value, strings[key]);
     if (typed === undefined) {
@@ -60,6 +63,17 @@ function toTyped(key: string, value: unknown, source: unknown): unknown {
     default:
       return value;
   }
+}
+
+/**
+ * Checks whether a key configures the web site and not the document.
+ *
+ * Each site generator uses its own names and forms. For example the page
+ * order is `sidebar_position` in Docusaurus and `sidebar.order` in Starlight.
+ * These keys must not reach a template.
+ */
+function isSiteSetting(key: string): boolean {
+  return DOCUSAURUS_SITE_KEYS.has(key) || STARLIGHT_SITE_KEYS.has(key);
 }
 
 function toRevisions(source: unknown): Revision[] | undefined {
