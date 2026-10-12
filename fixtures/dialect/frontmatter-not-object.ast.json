@@ -1,0 +1,28 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "code",
+      "lang": "yaml",
+      "meta": null,
+      "value": "- 作成\n- 承認"
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "本文。"
+        }
+      ]
+    }
+  ],
+  "meta": {},
+  "warnings": [
+    {
+      "line": 1,
+      "kind": "invalid-frontmatter",
+      "message": "The frontmatter is not a set of keys and values. It appears in the output as a code block."
+    }
+  ]
+}

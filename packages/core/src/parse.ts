@@ -11,13 +11,13 @@ import type { Parent, Root } from "./types.js";
  * Parses Markdown into a AST.
  *
  * @remarks
- * The function parses CommonMark, GFM and YAML frontmatter.
+ * The function parses CommonMark, GFM and YAML frontmatter. It never throws.
+ * A frontmatter that cannot be read stays in the tree as a `code` node, and
+ * `warnings` gets one entry for it.
  *
  * @param md - The Markdown source text.
  * @returns The mdast tree without the frontmatter. `meta` is `{}` when the
- * source has no frontmatter. `warnings` is always `[]` for now.
- * @throws Error
- * When the frontmatter is not valid YAML.
+ * source has no frontmatter. `warnings` is `[]` when the source has no problem.
  *
  * @example
  * ```ts
@@ -31,6 +31,6 @@ export function parse(md: string): Root {
     extensions: [gfm(), frontmatter(["yaml"])],
     mdastExtensions: [gfmFromMarkdown(), frontmatterFromMarkdown(["yaml"])],
   }) as Parent;
-  const meta = extractFrontmatter(tree);
-  return { ...tree, type: "root", meta, warnings: [] };
+  const { children, meta, warnings } = extractFrontmatter(tree.children);
+  return { ...tree, type: "root", children, meta, warnings };
 }

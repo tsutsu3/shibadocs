@@ -57,6 +57,37 @@ export interface Root extends Parent {
   /** The document metadata from the YAML frontmatter. It is `{}` when there is none. */
   meta: Record<string, unknown>;
 
-  /** The problems found in the source. It is always `[]` for now. */
-  warnings: unknown[];
+  /** The problems found in the source. It is `[]` when there is none. */
+  warnings: Warning[];
 }
+
+/**
+ * A problem in the source text.
+ * {@link parse} returns these in the `warnings` field of the root node.
+ *
+ * @example
+ * ```ts
+ * for (const w of parse(md).warnings) {
+ *   console.warn(`line ${w.line} [${w.kind}] ${w.message}`);
+ * }
+ * ```
+ */
+export interface Warning {
+  /** The line number in the Markdown source. It starts at 1. */
+  line: number;
+
+  /** The category of the problem. Use it to filter or to count warnings. */
+  kind: WarningKind;
+
+  /** The text for the user, in English. */
+  message: string;
+}
+
+/**
+ * The category of a warning.
+ *
+ * @remarks
+ * - `invalid-frontmatter` : The frontmatter is not valid YAML, or it is not a
+ *   set of keys and values.
+ */
+export type WarningKind = "invalid-frontmatter";

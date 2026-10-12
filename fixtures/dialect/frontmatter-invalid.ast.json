@@ -1,0 +1,38 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "code",
+      "lang": "yaml",
+      "meta": null,
+      "value": "title: 設計書\napprovals: [作成, 承認"
+    },
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "はじめに"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "本文。"
+        }
+      ]
+    }
+  ],
+  "meta": {},
+  "warnings": [
+    {
+      "line": 3,
+      "kind": "invalid-frontmatter",
+      "message": "The frontmatter is not valid YAML. It appears in the output as a code block."
+    }
+  ]
+}

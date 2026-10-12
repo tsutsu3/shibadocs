@@ -1,0 +1,16 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "本文。"
+        }
+      ]
+    }
+  ],
+  "meta": {},
+  "warnings": []
+}
