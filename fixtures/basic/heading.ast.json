@@ -1,0 +1,64 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "見出し1"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "使用"
+        },
+        {
+          "type": "inlineCode",
+          "value": "技術"
+        },
+        {
+          "type": "text",
+          "value": "の"
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "方針"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 3,
+      "children": [
+        {
+          "type": "text",
+          "value": "見出し3"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "depth": 6,
+      "children": [
+        {
+          "type": "text",
+          "value": "見出し6"
+        }
+      ]
+    }
+  ],
+  "meta": {},
+  "warnings": []
+}

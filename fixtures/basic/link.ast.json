@@ -1,0 +1,88 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "../guide/setup",
+          "children": [
+            {
+              "type": "text",
+              "value": "設定"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " と "
+        },
+        {
+          "type": "link",
+          "title": "タイトル",
+          "url": "https://example.com",
+          "children": [
+            {
+              "type": "text",
+              "value": "外部"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " を参照。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "image",
+          "title": null,
+          "url": "./fig/arch.png",
+          "alt": "構成図"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://example.com",
+          "children": [
+            {
+              "type": "text",
+              "value": "https://example.com"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " と "
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://example.org",
+          "children": [
+            {
+              "type": "text",
+              "value": "https://example.org"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " は自動リンクになる。"
+        }
+      ]
+    }
+  ],
+  "meta": {},
+  "warnings": []
+}

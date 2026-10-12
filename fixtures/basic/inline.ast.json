@@ -1,0 +1,75 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "strong",
+          "children": [
+            {
+              "type": "text",
+              "value": "強調"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " と "
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "斜体"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " と "
+        },
+        {
+          "type": "delete",
+          "children": [
+            {
+              "type": "text",
+              "value": "取消"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " と "
+        },
+        {
+          "type": "inlineCode",
+          "value": "コード"
+        },
+        {
+          "type": "text",
+          "value": " を含む。"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "行末の2スペースで"
+        },
+        {
+          "type": "break"
+        },
+        {
+          "type": "text",
+          "value": "改行する。"
+        }
+      ]
+    }
+  ],
+  "meta": {},
+  "warnings": []
+}

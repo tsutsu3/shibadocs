@@ -1,0 +1,25 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "code",
+      "lang": "ts",
+      "meta": null,
+      "value": "const a = 1;"
+    },
+    {
+      "type": "code",
+      "lang": null,
+      "meta": null,
+      "value": "言語の指定なし"
+    },
+    {
+      "type": "code",
+      "lang": null,
+      "meta": null,
+      "value": "インデントによるコード"
+    }
+  ],
+  "meta": {},
+  "warnings": []
+}

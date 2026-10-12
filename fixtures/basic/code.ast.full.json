@@ -1,0 +1,73 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "code",
+      "lang": "ts",
+      "meta": null,
+      "value": "const a = 1;",
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 4,
+          "offset": 22
+        }
+      }
+    },
+    {
+      "type": "code",
+      "lang": null,
+      "meta": null,
+      "value": "言語の指定なし",
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 24
+        },
+        "end": {
+          "line": 7,
+          "column": 4,
+          "offset": 39
+        }
+      }
+    },
+    {
+      "type": "code",
+      "lang": null,
+      "meta": null,
+      "value": "インデントによるコード",
+      "position": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "offset": 41
+        },
+        "end": {
+          "line": 9,
+          "column": 16,
+          "offset": 56
+        }
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 10,
+      "column": 1,
+      "offset": 57
+    }
+  },
+  "meta": {},
+  "warnings": []
+}
