@@ -54,7 +54,7 @@ export interface Point {
 export interface Root extends Parent {
   type: "root";
 
-  /** The document metadata. It is always `{}` for now. */
+  /** The document metadata from the YAML frontmatter. It is `{}` when there is none. */
   meta: Record<string, unknown>;
 
   /** The problems found in the source. It is always `[]` for now. */

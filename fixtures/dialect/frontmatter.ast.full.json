@@ -1,0 +1,60 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "テストです。",
+          "position": {
+            "start": {
+              "line": 8,
+              "column": 1,
+              "offset": 82
+            },
+            "end": {
+              "line": 8,
+              "column": 7,
+              "offset": 88
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 8,
+          "column": 1,
+          "offset": 82
+        },
+        "end": {
+          "line": 8,
+          "column": 7,
+          "offset": 88
+        }
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 9,
+      "column": 1,
+      "offset": 89
+    }
+  },
+  "meta": {
+    "title": "在庫管理システム 基本設計書",
+    "author": "山田 太郎",
+    "landscape": false,
+    "approvals": [
+      "作成",
+      "承認"
+    ]
+  },
+  "warnings": []
+}
