@@ -1,0 +1,115 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "test",
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 5,
+              "offset": 4
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 5,
+          "offset": 4
+        }
+      }
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 6
+        },
+        "end": {
+          "line": 3,
+          "column": 4,
+          "offset": 9
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "sample",
+          "position": {
+            "start": {
+              "line": 4,
+              "column": 1,
+              "offset": 10
+            },
+            "end": {
+              "line": 4,
+              "column": 7,
+              "offset": 16
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 4,
+          "column": 1,
+          "offset": 10
+        },
+        "end": {
+          "line": 4,
+          "column": 7,
+          "offset": 16
+        }
+      }
+    },
+    {
+      "type": "thematicBreak",
+      "position": {
+        "start": {
+          "line": 6,
+          "column": 1,
+          "offset": 18
+        },
+        "end": {
+          "line": 6,
+          "column": 4,
+          "offset": 21
+        }
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 6,
+      "column": 4,
+      "offset": 21
+    }
+  },
+  "meta": {},
+  "warnings": []
+}

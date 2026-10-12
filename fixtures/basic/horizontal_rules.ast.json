@@ -1,0 +1,31 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "test"
+        }
+      ]
+    },
+    {
+      "type": "thematicBreak"
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "sample"
+        }
+      ]
+    },
+    {
+      "type": "thematicBreak"
+    }
+  ],
+  "meta": {},
+  "warnings": []
+}
