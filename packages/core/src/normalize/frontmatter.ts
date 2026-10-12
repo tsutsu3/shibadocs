@@ -1,14 +1,15 @@
 import { YAMLParseError, parse as parseYaml } from "yaml";
 
-import type { Literal, Node, Warning } from "../types.js";
+import type { DocMeta, Literal, Node, Warning } from "../types.js";
+import { toDocMeta } from "./docmeta.js";
 
 /** The result of {@link extractFrontmatter}. */
 export interface Frontmatter {
   /** The nodes of the document without the `yaml` node. */
   children: Node[];
 
-  /** The frontmatter as an object. `{}` when the document has none. */
-  meta: Record<string, unknown>;
+  /** The typed frontmatter. `{}` when the document has none. */
+  meta: DocMeta;
 
   /** The problems found in the frontmatter. `[]` when there is none. */
   warnings: Warning[];
@@ -30,9 +31,12 @@ export function extractFrontmatter(children: readonly Node[]): Frontmatter {
   const node = first as Literal;
   const startLine = node.position?.start.line ?? 1;
 
-  let meta;
+  let values: unknown;
+  let strings: unknown;
+
   try {
-    meta = parseYaml(node.value) ?? {};
+    values = parseYaml(node.value) ?? {};
+    strings = parseYaml(node.value, { schema: "failsafe" }) ?? {};
   } catch (error) {
     // The YAML text starts one line below the opening `---`.
     const yamlLine =
@@ -47,7 +51,7 @@ export function extractFrontmatter(children: readonly Node[]): Frontmatter {
   }
 
   // A list or a plain string is valid YAML, but it is not metadata.
-  if (typeof meta !== "object" || meta === null || Array.isArray(meta)) {
+  if (!isRecord(values) || !isRecord(strings)) {
     return keepAsCode(node, rest, {
       line: startLine,
       kind: "invalid-frontmatter",
@@ -56,11 +60,21 @@ export function extractFrontmatter(children: readonly Node[]): Frontmatter {
     });
   }
 
-  return {
-    children: rest,
-    meta: meta as Record<string, unknown>,
-    warnings: [],
-  };
+  const { meta, invalid } = toDocMeta(values, strings);
+  const warnings: Warning[] = [];
+  if (invalid.length > 0) {
+    warnings.push({
+      line: startLine,
+      kind: "invalid-frontmatter",
+      message: `These frontmatter keys have an invalid value and are ignored. ${invalid.join(", ")}`,
+    });
+  }
+
+  return { children: rest, meta, warnings };
+}
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
 /**

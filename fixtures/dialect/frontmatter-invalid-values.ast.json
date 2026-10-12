@@ -1,0 +1,25 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "本文。"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "author": "山田 太郎",
+    "paper": "a5"
+  },
+  "warnings": [
+    {
+      "line": 1,
+      "kind": "invalid-frontmatter",
+      "message": "These frontmatter keys have an invalid value and are ignored. title, revisions"
+    }
+  ]
+}

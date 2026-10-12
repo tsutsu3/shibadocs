@@ -9,28 +9,28 @@
           "value": "テストです。",
           "position": {
             "start": {
-              "line": 8,
+              "line": 9,
               "column": 1,
-              "offset": 82
+              "offset": 97
             },
             "end": {
-              "line": 8,
+              "line": 9,
               "column": 7,
-              "offset": 88
+              "offset": 103
             }
           }
         }
       ],
       "position": {
         "start": {
-          "line": 8,
+          "line": 9,
           "column": 1,
-          "offset": 82
+          "offset": 97
         },
         "end": {
-          "line": 8,
+          "line": 9,
           "column": 7,
-          "offset": 88
+          "offset": 103
         }
       }
     }
@@ -42,14 +42,15 @@
       "offset": 0
     },
     "end": {
-      "line": 9,
+      "line": 10,
       "column": 1,
-      "offset": 89
+      "offset": 104
     }
   },
   "meta": {
     "title": "在庫管理システム 基本設計書",
     "author": "山田 太郎",
+    "version": "1.2.3",
     "landscape": false,
     "approvals": [
       "作成",

@@ -55,10 +55,75 @@ export interface Root extends Parent {
   type: "root";
 
   /** The document metadata from the YAML frontmatter. It is `{}` when there is none. */
-  meta: Record<string, unknown>;
+  meta: DocMeta;
 
   /** The problems found in the source. It is `[]` when there is none. */
   warnings: Warning[];
+}
+
+/**
+ * The document metadata from the YAML frontmatter.
+ *
+ * @remarks
+ * A known key with a value of a wrong form is left out and reported as a
+ * warning. A key without a value is left out without a warning.
+ *
+ * @example
+ * ```ts
+ * const { meta } = parse("---\ntitle: Design\nversion: 1.0\npaper: A3\n---\n");
+ * // { title: "Design", version: "1.0", paper: "a3" }
+ * ```
+ */
+export interface DocMeta {
+  /** The document title. */
+  title?: string;
+
+  /** The second line of the title. */
+  subtitle?: string;
+
+  /** The name of the author. */
+  author?: string;
+
+  /**
+   * The document version.
+   *
+   * @remarks
+   * Any single value is accepted, for example `1`, `1.2`, `1.2.3` or `v2.0-rc1`.
+   * The value is the source text. `version: 1.0` gives `"1.0"`, not `"1"`.
+   */
+  version?: string;
+
+  /** The document date, as written in the source. The parser does not parse it. */
+  date?: string;
+
+  /** The template name. For example `ja-report`. */
+  template?: string;
+
+  /** The revision history, in source order. */
+  revisions?: Revision[];
+
+  /**
+   * Any other frontmatter key.
+   *
+   * @remarks
+   * The parser copies unknown keys as they are. The values have YAML types.
+   */
+  [key: string]: unknown;
+}
+
+/** One row of the revision history. Every field is the source text. */
+export interface Revision {
+  /** The version of this revision. For example `"1.0"`. */
+  ver: string;
+
+  /** The date of this revision. */
+  date: string;
+
+  /** The name of the person who made this revision. */
+  by: string;
+
+  /** The description of the change. It is `""` when the source has none. */
+  note: string;
 }
 
 /**
@@ -87,7 +152,7 @@ export interface Warning {
  * The category of a warning.
  *
  * @remarks
- * - `invalid-frontmatter` : The frontmatter is not valid YAML, or it is not a
- *   set of keys and values.
+ * - `invalid-frontmatter` : The frontmatter is not valid YAML, it is not a
+ *   set of keys and values, or a known key has a value of a wrong form.
  */
 export type WarningKind = "invalid-frontmatter";

@@ -1,0 +1,61 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "本文。",
+          "position": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 64
+            },
+            "end": {
+              "line": 9,
+              "column": 4,
+              "offset": 67
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "offset": 64
+        },
+        "end": {
+          "line": 9,
+          "column": 4,
+          "offset": 67
+        }
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 10,
+      "column": 1,
+      "offset": 68
+    }
+  },
+  "meta": {
+    "author": "山田 太郎",
+    "paper": "a5"
+  },
+  "warnings": [
+    {
+      "line": 1,
+      "kind": "invalid-frontmatter",
+      "message": "These frontmatter keys have an invalid value and are ignored. title, revisions"
+    }
+  ]
+}
