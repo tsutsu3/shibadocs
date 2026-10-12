@@ -1,0 +1,40 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "開始は 10:30、終了は 18:00 とする。比率は a:b で表し、キーは user:name の形式とする。"
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": null,
+      "spread": false,
+      "children": [
+        {
+          "type": "listItem",
+          "spread": false,
+          "checked": null,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "稼働時間 8:00〜20:00"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "meta": {},
+  "warnings": []
+}

@@ -1,0 +1,84 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "unknownDirective",
+      "name": "mystery",
+      "options": {
+        "level": "2",
+        "open": ""
+      },
+      "value": ":::mystery[見出し]{level=\"2\" open}\n\n未知のディレクティブの**本文**。\n\n:::",
+      "children": [
+        {
+          "type": "paragraph",
+          "data": {
+            "directiveLabel": true
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "見出し"
+            }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "未知のディレクティブの"
+            },
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "本文"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": "。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "unknownDirective",
+      "name": "video",
+      "options": {
+        "src": "intro.mp4"
+      },
+      "value": "::video[紹介動画]{src=\"intro.mp4\"}",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "紹介動画"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "meta": {},
+  "warnings": [
+    {
+      "line": 1,
+      "kind": "unknown-directive",
+      "message": "The directive \":::mystery\" is unknown. Its content appears in the output as normal text.",
+      "column": 1
+    },
+    {
+      "line": 7,
+      "kind": "unknown-directive",
+      "message": "The directive \"::video\" is unknown. Its content appears in the output as normal text.",
+      "column": 1
+    }
+  ]
+}

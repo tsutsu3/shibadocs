@@ -160,6 +160,9 @@ export interface Warning {
   /** The line number in the Markdown source. It starts at 1. */
   line: number;
 
+  /** The column number in the Markdown source. It starts at 1. */
+  column?: number;
+
   /** The category of the problem. Use it to filter or to count warnings. */
   kind: WarningKind;
 
@@ -173,5 +176,49 @@ export interface Warning {
  * @remarks
  * - `invalid-frontmatter` : The frontmatter is not valid YAML, it is not a
  *   set of keys and values, or a known key has a value of a wrong form.
+ * - `unknown-directive` : The source has a directive that the parser does not
+ *   know, such as `:::name`.
  */
-export type WarningKind = "invalid-frontmatter";
+export type WarningKind = "invalid-frontmatter" | "unknown-directive";
+
+/**
+ * A directive that the parser does not know.
+ *
+ * @remarks
+ * The parser keeps unknown input in this node and never drops it.
+ * A warning of kind `unknown-directive` exists at the same line and column.
+ * A renderer prints `children` as normal content.
+ *
+ * @example
+ * ```ts
+ * const root = parse(':::mystery{level="2"}\nText\n:::\n');
+ * // { type: "unknownDirective", name: "mystery", options: { level: "2" },
+ * //   value: ':::mystery{level="2"}\nText\n:::', children: [{ type: "paragraph", … }] }
+ * ```
+ */
+export interface UnknownDirective extends Parent {
+  type: "unknownDirective";
+
+  /** The directive name, without the colons. */
+  name: string;
+
+  /**
+   * The attributes of the directive, as source strings.
+   *
+   * @remarks
+   * An attribute without a value is `""`. A number is a string.
+   */
+  options: Record<string, string>;
+
+  /** The complete source text of the directive, with its markers. */
+  value: string;
+
+  /**
+   * The parsed content of the directive.
+   *
+   * @remarks
+   * The label of `:::name[label]` is the first paragraph. Its
+   * `data.directiveLabel` is `true`.
+   */
+  children: Node[];
+}

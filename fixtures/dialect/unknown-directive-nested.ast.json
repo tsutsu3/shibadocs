@@ -1,0 +1,54 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "unknownDirective",
+      "name": "outer",
+      "options": {},
+      "value": "::::outer\n\n外側の本文。\n\n:::inner\n\n内側の本文。開始は 10:30 とする。\n\n:::\n\n::::",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "外側の本文。"
+            }
+          ]
+        },
+        {
+          "type": "unknownDirective",
+          "name": "inner",
+          "options": {},
+          "value": ":::inner\n\n内側の本文。開始は 10:30 とする。\n\n:::",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "内側の本文。開始は 10:30 とする。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "meta": {},
+  "warnings": [
+    {
+      "line": 5,
+      "kind": "unknown-directive",
+      "message": "The directive \":::inner\" is unknown. Its content appears in the output as normal text.",
+      "column": 1
+    },
+    {
+      "line": 1,
+      "kind": "unknown-directive",
+      "message": "The directive \":::outer\" is unknown. Its content appears in the output as normal text.",
+      "column": 1
+    }
+  ]
+}

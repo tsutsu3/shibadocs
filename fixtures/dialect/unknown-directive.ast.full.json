@@ -1,0 +1,228 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "unknownDirective",
+      "name": "mystery",
+      "options": {
+        "level": "2",
+        "open": ""
+      },
+      "value": ":::mystery[見出し]{level=\"2\" open}\n\n未知のディレクティブの**本文**。\n\n:::",
+      "children": [
+        {
+          "type": "paragraph",
+          "data": {
+            "directiveLabel": true
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": "見出し",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 12,
+                  "offset": 11
+                },
+                "end": {
+                  "line": 1,
+                  "column": 15,
+                  "offset": 14
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 11,
+              "offset": 10
+            },
+            "end": {
+              "line": 1,
+              "column": 16,
+              "offset": 15
+            }
+          }
+        },
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "未知のディレクティブの",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 1,
+                  "offset": 33
+                },
+                "end": {
+                  "line": 3,
+                  "column": 12,
+                  "offset": 44
+                }
+              }
+            },
+            {
+              "type": "strong",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "本文",
+                  "position": {
+                    "start": {
+                      "line": 3,
+                      "column": 14,
+                      "offset": 46
+                    },
+                    "end": {
+                      "line": 3,
+                      "column": 16,
+                      "offset": 48
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 12,
+                  "offset": 44
+                },
+                "end": {
+                  "line": 3,
+                  "column": 18,
+                  "offset": 50
+                }
+              }
+            },
+            {
+              "type": "text",
+              "value": "。",
+              "position": {
+                "start": {
+                  "line": 3,
+                  "column": 18,
+                  "offset": 50
+                },
+                "end": {
+                  "line": 3,
+                  "column": 19,
+                  "offset": 51
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 3,
+              "column": 1,
+              "offset": 33
+            },
+            "end": {
+              "line": 3,
+              "column": 19,
+              "offset": 51
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 4,
+          "offset": 56
+        }
+      }
+    },
+    {
+      "type": "unknownDirective",
+      "name": "video",
+      "options": {
+        "src": "intro.mp4"
+      },
+      "value": "::video[紹介動画]{src=\"intro.mp4\"}",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": "紹介動画",
+              "position": {
+                "start": {
+                  "line": 7,
+                  "column": 9,
+                  "offset": 66
+                },
+                "end": {
+                  "line": 7,
+                  "column": 13,
+                  "offset": 70
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 7,
+              "column": 1,
+              "offset": 58
+            },
+            "end": {
+              "line": 7,
+              "column": 31,
+              "offset": 88
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "offset": 58
+        },
+        "end": {
+          "line": 7,
+          "column": 31,
+          "offset": 88
+        }
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 8,
+      "column": 1,
+      "offset": 89
+    }
+  },
+  "meta": {},
+  "warnings": [
+    {
+      "line": 1,
+      "kind": "unknown-directive",
+      "message": "The directive \":::mystery\" is unknown. Its content appears in the output as normal text.",
+      "column": 1
+    },
+    {
+      "line": 7,
+      "kind": "unknown-directive",
+      "message": "The directive \"::video\" is unknown. Its content appears in the output as normal text.",
+      "column": 1
+    }
+  ]
+}
